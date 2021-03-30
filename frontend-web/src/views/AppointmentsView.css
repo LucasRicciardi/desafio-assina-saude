@@ -1,15 +1,66 @@
 
 .AppointmentsView {
-    max-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .container {
+    overflow-y: auto;
     max-height: 80vh;
-    overflow-y: scroll;
     padding: 1rem;
     flex-grow: 1;
 }
 
 .btn {
     width: 100%;
+}
+
+.date {
+    color: lightgray;
+    margin-top: -12px;
+}
+
+.date:first-child {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.date :last-child {
+    font-size: 26px;
+    font-weight: lighter;
+    margin-left: 1rem;
+    margin-top: -12px;
+}
+
+.list-group-item {
+    padding: 0.5rem;
+}
+
+.card-body {
+    padding: 0.75rem;
+    color: rgb(58, 122, 58);
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.card-text span {
+    font-size: 13px;
+    margin-bottom: 5px
+}
+
+.card-text span:last-child {
+    font-size: 14px;
+}
+
+.current-date .date {
+    color: rgb(58, 122, 58);
+}
+
+.current-date .card-body {
+    color: lightgray;
+    background-color: rgb(58, 122, 58);
 }

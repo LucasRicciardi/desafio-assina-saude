@@ -202,6 +202,11 @@ export default class SchedulingView extends React.Component {
     }
 
     submitForm() {
+
+        if (!this.state.selectedProfessional || !this.state.selectedTime) {
+            return
+        }
+
         AppointmentsService.createAppointment(this.state.selectedProfessional, this.state.selectedTime).then(appointment => {
             localStorage.setItem('appointment', JSON.stringify(appointment))
             this.setState({
@@ -262,6 +267,9 @@ export default class SchedulingView extends React.Component {
                         </Row>
                         <Row>
                             <Col className="text-center">
+                                <header className="calendar-header">
+                                    Selecione o dia e o horário
+                                </header>
                                 <Calendar
                                     view={'month'}
                                     onActiveStartDateChange={this.getProfessionalAppointmentsByDate}

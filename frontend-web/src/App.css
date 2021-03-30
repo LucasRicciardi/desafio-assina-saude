@@ -14,4 +14,17 @@ body {
 
 header {
   padding: 1rem;
+  color: white;
+  background-color: brown;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+.btn.btn-primary {
+  color: white;
+  background-color: brown;
+  border-color: brown;
+  font-weight: bold;
 }

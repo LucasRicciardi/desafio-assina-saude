@@ -46,7 +46,7 @@ export default class SchedulingConfirmationView extends React.Component {
                 <Container>
                     <Row>
                         <Col>
-                            <Card>
+                            <Card className="confirmation-card">
                                 <Card.Body>
                                     <Card.Title>Tudo certo!</Card.Title>
                                     <Card.Text>Entraremos em contato com um dia de antecedência para confirmar sua presença.</Card.Text>
@@ -56,7 +56,7 @@ export default class SchedulingConfirmationView extends React.Component {
                     </Row>
                     <Row className="mt-4">
                         <Col>
-                            <Card>
+                            <Card className="resume-card">
                                 <Card.Body>
                                     <Card.Title>Resumo</Card.Title>
                                     <Card.Text>

@@ -6,3 +6,10 @@
     justify-content: space-evenly;
     align-content: center;
 }
+
+.calendar-header {
+    background-color: rgb(58, 122, 58);
+}
+.react-calendar {
+    color: brown;
+}
