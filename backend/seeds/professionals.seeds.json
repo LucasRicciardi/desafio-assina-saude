@@ -1,0 +1,22 @@
+[   
+    {
+        "name": "Mariana",
+        "gender": "female",
+        "specialty": "Cardiologia",
+        "crm": "93884"
+
+    },
+    {
+        "name": "Carlos",
+        "gender": "male",
+        "specialty": "Cardiologia",
+        "crm": "93884"
+
+    },
+    {
+        "name": "Danielle",
+        "gender": "female",
+        "specialty": "Psicologia",
+        "crm": "93884"
+    }
+]

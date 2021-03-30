@@ -1,0 +1,26 @@
+version: "3.5"
+services:
+  backend:
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
+    environment: 
+      - DATABASE_NAME=assina_saude
+      - DATABASE_URL=mongodb://database:27017
+    depends_on:
+      - database
+  frontend-web:
+    build:
+      context: frontend-web
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    depends_on:
+      - backend
+  database:
+    image: mongo
+    ports:
+      - 27017:27017
+  
