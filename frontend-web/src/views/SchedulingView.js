@@ -25,6 +25,7 @@ export default class SchedulingView extends React.Component {
         super(props)
 
         this.state = {
+            submitButtonClicked: false,
             appointmentCreated: false,
             selectedTime: null,
             selectedProfessional: null,
@@ -202,7 +203,12 @@ export default class SchedulingView extends React.Component {
     }
 
     submitForm() {
-
+        
+        this.setState({
+            ...this.state,
+            submitButtonClicked: true
+        })
+        
         if (!this.state.selectedProfessional || !this.state.selectedTime) {
             return
         }
@@ -254,6 +260,7 @@ export default class SchedulingView extends React.Component {
                                         as="select" 
                                         onChange={this.getProfessionalAppointments}
                                         disabled={this.state.professionals === null}
+                                        isInvalid={this.state.submitButtonClicked && this.state.selectedProfessional === null}
                                     >
                                         <option className="placeholder">Selecione...</option>
                                         {this.state.professionals && this.state.professionals.map(professional => 
@@ -284,6 +291,7 @@ export default class SchedulingView extends React.Component {
                                         as="select" 
                                         onChange={this.setSelectedTime}
                                         disabled={this.state.availableTimes === null}
+                                        isInvalid={this.state.submitButtonClicked && this.state.selectedTime === null}
                                     >
                                         <option className="placeholder">Selecione o horário</option>
                                         {this.state.availableTimes && this.state.availableTimes.map(time => 
