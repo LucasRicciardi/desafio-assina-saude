@@ -66,7 +66,7 @@ export default class AppointmentsView extends React.Component {
 
         function formatDay(date) {
 
-            const [ day, month, year ] = date.split('/')
+            const [ day, month, ] = date.split('/')
 
             const toString = {
                 '01': 'Jan',
@@ -129,6 +129,9 @@ export default class AppointmentsView extends React.Component {
                     }
                     {this.state.days.length > 0 && this.state.days.map(([day, appointments]) =>
                         <Row key={day} className={"mt-4 " + isCurrentDate(day)}>
+                            <Col xs={{ span: 8, offset: 3 }} className="today-header">
+                                <span>Hoje</span>
+                            </Col>
                             <Col xs={3}>{formatDay(day)}</Col>
                             <Col>
                                 <ListGroup variant="flush">

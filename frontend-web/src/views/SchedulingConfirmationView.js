@@ -59,26 +59,24 @@ export default class SchedulingConfirmationView extends React.Component {
                             <Card className="resume-card">
                                 <Card.Body>
                                     <Card.Title>Resumo</Card.Title>
-                                    <Card.Text>
-                                        <Form>
-                                            <Form.Group>
-                                                <Form.Label>Especialidade</Form.Label>
-                                                <Form.Control value={specialty} readOnly />
-                                            </Form.Group>
-                                            <Form.Group>
-                                                <Form.Label>Profissional</Form.Label>
-                                                <Form.Control value={professional} readOnly />
-                                            </Form.Group>
-                                            <Form.Group>
-                                                <Form.Label>Data</Form.Label>
-                                                <Form.Control value={date} readOnly />
-                                            </Form.Group>
-                                            <Form.Group>
-                                                <Form.Label>Horário</Form.Label>
-                                                <Form.Control value={time} readOnly />
-                                            </Form.Group>
-                                        </Form>
-                                    </Card.Text>
+                                    <Form>
+                                        <Form.Group>
+                                            <Form.Label>Especialidade</Form.Label>
+                                            <Form.Control value={specialty} readOnly />
+                                        </Form.Group>
+                                        <Form.Group>
+                                            <Form.Label>Profissional</Form.Label>
+                                            <Form.Control value={professional} readOnly />
+                                        </Form.Group>
+                                        <Form.Group>
+                                            <Form.Label>Data</Form.Label>
+                                            <Form.Control value={date} readOnly />
+                                        </Form.Group>
+                                        <Form.Group>
+                                            <Form.Label>Horário</Form.Label>
+                                            <Form.Control value={time} readOnly />
+                                        </Form.Group>
+                                    </Form>
                                 </Card.Body>
                             </Card>
                         </Col>

@@ -58,6 +58,18 @@
     font-size: 14px;
 }
 
+.today-header {
+    display: none;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 18px;
+    color: gray;
+}
+
+.today-header span {
+    margin-left: 15px;
+}
+
 .current-date .date {
     color: rgb(58, 122, 58);
 }
@@ -74,4 +86,8 @@
 .current-date .card-body {
     color: lightgray;
     background-color: rgb(58, 122, 58);
+}
+
+.current-date .today-header {
+    display: block;
 }
