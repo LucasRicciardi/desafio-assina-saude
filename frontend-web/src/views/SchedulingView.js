@@ -280,6 +280,7 @@ export default class SchedulingView extends React.Component {
                                     onActiveStartDateChange={this.getProfessionalAppointmentsByDate}
                                     onClickDay={this.getAvailableTimes}
                                     tileDisabled={this.verifyIfDayIsFull}
+                                    locale={'pt-BR'}
                                 />
                             </Col>
                         </Row>
