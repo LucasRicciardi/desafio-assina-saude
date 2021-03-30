@@ -3,13 +3,34 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-content: center;
 }
 
 .calendar-header {
     background-color: rgb(58, 122, 58);
 }
+
 .react-calendar {
     color: brown;
+    border: none;
+    width: 100%;
+}
+
+.react-calendar__navigation__label,
+.react-calendar__navigation__arrow {
+    color: brown;
+    font-weight: bold;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+    color: rgb(58, 122, 58);
+    text-transform: capitalize;
+    font-size: 14px;
+    margin-top: 6px;
+    margin-bottom: 8px;
+}
+
+abbr[title] {
+    text-decoration: none;
 }

@@ -235,11 +235,10 @@ export default class SchedulingView extends React.Component {
                                     <Form.Label>Especialidade</Form.Label>
                                     <Form.Control 
                                         as="select" 
-                                        placeholder="Especialidade" 
                                         onChange={this.getProfessionalsBySelectedSpecialty}
                                         disabled={this.state.specialties === null}
                                     >
-                                        <option></option>
+                                        <option className="placeholder">P. ex: Cardiologista</option>
                                         {this.state.specialties && this.state.specialties.map(specialty =>
                                             <option key={specialty.name} value={specialty.name}>{specialty.name}</option>
                                         )}
@@ -253,11 +252,10 @@ export default class SchedulingView extends React.Component {
                                     <Form.Label>Profissional</Form.Label>
                                     <Form.Control 
                                         as="select" 
-                                        placeholder="Profissional" 
                                         onChange={this.getProfessionalAppointments}
                                         disabled={this.state.professionals === null}
                                     >
-                                        <option></option>
+                                        <option className="placeholder">Selecione...</option>
                                         {this.state.professionals && this.state.professionals.map(professional => 
                                             <option key={professional.id} value={professional.id}>{professional.name}</option>    
                                         )}
@@ -278,17 +276,16 @@ export default class SchedulingView extends React.Component {
                                 />
                             </Col>
                         </Row>
-                        <Row className="mt-1">
+                        <Row className="mt-3">
                             <Col>
                                 <Form.Group>
                                     <Form.Label>Horário</Form.Label>
                                     <Form.Control 
                                         as="select" 
-                                        placeholder="Selecione o horário" 
                                         onChange={this.setSelectedTime}
                                         disabled={this.state.availableTimes === null}
                                     >
-                                        <option></option>
+                                        <option className="placeholder">Selecione o horário</option>
                                         {this.state.availableTimes && this.state.availableTimes.map(time => 
                                             <option key={time.time} value={time.time} disabled={time.isOccupied}>{time.hour}</option>
                                         )}
