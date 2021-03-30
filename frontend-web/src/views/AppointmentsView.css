@@ -20,6 +20,7 @@
 .date {
     color: lightgray;
     margin-top: -12px;
+    margin-left: 0.5rem;
 }
 
 .date:first-child {
@@ -29,7 +30,7 @@
 
 .date :last-child {
     font-size: 26px;
-    font-weight: lighter;
+    font-weight: normal;
     margin-left: 1rem;
     margin-top: -12px;
 }
@@ -58,6 +59,15 @@
 
 .current-date .date {
     color: rgb(58, 122, 58);
+}
+
+.current-date .date:first-child {
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.current-date .date :last-child {
+    font-size: 28px;
 }
 
 .current-date .card-body {
